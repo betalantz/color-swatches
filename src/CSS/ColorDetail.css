@@ -36,7 +36,7 @@
 }
 
 .tint-swatch {
-  width: 175px;
+  width: 150px;
   margin: 5px;
   box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.2);
   border-radius: 6px;
@@ -44,16 +44,18 @@
 }
 
 .tint-sample {
-  height: 110px;
+  height: 120px;
+  border-radius: 6px 6px 0 0;
 }
 
 .tint-label {
-  height: 65px;
+  height: 40px;
+  padding: 15px 0 0 15px;
 }
 
 .clear-button {
-  position: absolute;
-  bottom: 100px;
+  display: block;
+  margin-top: 15px;
 }
 
 /*# sourceMappingURL=ColorDetail.css.map */
