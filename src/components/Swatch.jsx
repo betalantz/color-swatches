@@ -7,6 +7,6 @@ export default function Swatch(props) {
         <Link to={`/detail/${props.swatch.colorId}`}>
             <div className="sample" style={{backgroundColor: props.swatch.hexString}}></div>
         </Link>
-            <h2 className="label" style={{textDecoration: 'none'}}>{ props.swatch.hexString }</h2>
+            <div className="label" style={{textDecoration: 'none'}}>{ props.swatch.hexString }</div>
     </li>
 }

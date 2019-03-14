@@ -30,7 +30,7 @@ export default function ColorDetail(props) {
         return rgb
     }
     const tints = []
-    for (let j = -3; j<=3; j++) {
+    for (let j = -2; j<=2; j++) {
         tints.push(ColorLuminance(detail.hexString, j*0.1))
     }
     const renderTints = tints.map(tint => {
@@ -47,9 +47,11 @@ export default function ColorDetail(props) {
         </li>
     })
 
-    return <div>
-        <div className="detail" style={{backgroundColor: detail.hexString}}></div>
-        <h2>{detail.hexString}</h2>
+    return <div className="detail">
+        <div className="detail-swatch">
+            <div className="detail-sample" style={{backgroundColor: detail.hexString}}></div>
+            <div className="detail-label">{detail.hexString}</div>
+        </div>
         <div className="tint-row">
             <ul>
             { renderTints }

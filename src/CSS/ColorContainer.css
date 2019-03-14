@@ -1,0 +1,13 @@
+.color-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.sidebar {
+  top: 100;
+  position: absolute;
+  background-color: orange;
+}
+
+/*# sourceMappingURL=ColorContainer.css.map */

@@ -1,17 +1,42 @@
-.detail 
-    width: 200px
-    height: 200px
+.detail
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+
+.detail-swatch
+    width: 80%
+    margin: 20px 
+    box-shadow: 1px 1px 3px 0 rgba(0,0,0,.2)
+    border-radius: 6px
+.detail-sample
+    height: 550px
+    border-radius: 6px 6px 0 0
+.detail-label 
+    height: 30px
+    padding: 15px 15px
+    background-color: white
+    color: black
+    font-size: 1.5em
 
 .tint-row 
-    display: flex
+    width: 80%
 
 .tint-row ul 
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-evenly
     list-style: none
 
 .tint-swatch 
-    width: 100px
-    display: inline-block
+    width: 175px
+    margin: 5px
+    box-shadow: 1px 1px 3px 0 rgba(0,0,0,.2)
+    border-radius: 6px
+    flex-shrink: 1
 
-.tint-swatch .tint-sample 
-    height: 50px
+.tint-sample 
+    height: 110px
+
+.tint-label
+    height: 65px
 
