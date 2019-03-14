@@ -1,5 +1,6 @@
 import React from "react"
 import Panel from "./panel"
+import Randomize from "./Randomize"
 import logo from "../assets/logo.png"
 
 const styles = {
@@ -9,7 +10,7 @@ const styles = {
   },
   sidebarLink: {
     display: "block",
-    padding: "16px 0px",
+    padding: "10px 20px",
     color: "#757575",
     textDecoration: "none"
   },
@@ -33,13 +34,20 @@ const SidebarContent = props => {
     const categories = ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Purple', 'Brown', 'Gray']
 
     const links = []
-
-    categories.map((cat) => (
-        <div key={cat} className="sideLink" style={styles.sidebarLink}>cat</div>
-    ))
+    for (let ind = 0; ind < categories.length; ind++) {
+        links.push(
+          <a key={ind} href="#" style={styles.sidebarLink}>
+            {categories[ind]}
+          </a>
+        );
+    }
+    // const randomButton = ({onRanClick}) => {
+    //     return <button className="rand-button" onClick={onRanClick} type="button">Random</button>
+    // }
 
     return (
         <Panel src={logo} style={style}>
+            <Randomize onRClick={props.onRandClick}/>
             <div style={styles.content}>
                 {links}
             </div>

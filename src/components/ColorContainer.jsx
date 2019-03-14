@@ -71,7 +71,7 @@ export default class ColorContainer extends React.Component {
 
 
     render() {
-        const sidebar = <SidebarContent />
+        const sidebar = <SidebarContent onRandClick={this.onRandomClick}/>
 
         const contentHeader = (
             <span>

@@ -21,11 +21,8 @@ export default function ColorDetail(props) {
         var rgb = "#", c, i;
         for (i = 0; i < 3; i++) {
             c = parseInt(hex.substring(i*2, (i*2)+2), 16)
-            console.log(c);
             c = Math.round(Math.min(Math.max(0, c + (c * lum)), 255)).toString(16)
-            console.log(c);
             rgb += c.padStart(2, "0")
-            console.log(rgb);
         }
         return rgb
     }
