@@ -12,7 +12,7 @@
 }
 
 .detail-sample {
-  height: 550px;
+  height: 350px;
   border-radius: 6px 6px 0 0;
 }
 
@@ -49,6 +49,11 @@
 
 .tint-label {
   height: 65px;
+}
+
+.clear-button {
+  position: absolute;
+  bottom: 100px;
 }
 
 /*# sourceMappingURL=ColorDetail.css.map */

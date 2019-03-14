@@ -57,6 +57,7 @@ export default function ColorDetail(props) {
             { renderTints }
             </ul>
         </div>
-        <Link to='/'><button>Clear</button></Link>
+        <div className="clear-button"><Link to='/'><button>Clear</button></Link></div>
+        
     </div>
 }

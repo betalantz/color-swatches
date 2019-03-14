@@ -188,4 +188,17 @@ body {
   font-family: "Source Serif Pro", serif;
 }
 
+button {
+  width: 260px;
+  height: 60px;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+  font-size: 1em;
+  text-align: center;
+}
+
 /*# sourceMappingURL=index.css.map */
