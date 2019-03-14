@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { HashRouter as Router } from "react-router-dom"
 import ColorContainer from "./components/ColorContainer"
-import './index.css';
+import './css/index.css';
 
 ReactDOM.render((
     <Router>
