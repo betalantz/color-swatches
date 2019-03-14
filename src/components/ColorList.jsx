@@ -2,8 +2,6 @@ import React from "react"
 import Swatch from "./Swatch"
 import '../css/ColorList.css'
 
-
-
 export default class ColorList extends React.Component {
     constructor(props) {
         super(props)
