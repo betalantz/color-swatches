@@ -15,8 +15,8 @@ export default class ColorContainer extends React.Component {
        
     }
     componentWillMount() {
-    const colors = colorAPI.all();
-    this.setState({ colors: colors })
+        const colors = colorAPI.all();
+        this.setState({ colors: colors })
     }
 
     render() {
