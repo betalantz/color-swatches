@@ -11,14 +11,14 @@ export default class ColorList extends React.Component {
             colors: [],
             currentPage: 1,
             swatchesPerPage: 12,
-            isWideScreen: mql.matches
         }
         this.handleClick = this.handleClick.bind(this)
         this.mediaQueryChanged = this.mediaQueryChanged.bind(this)
     }
     mediaQueryChanged() {
         let displayNum = mql.matches ? 12 : 9
-        this.setState({ isWideScreen: mql.matches, swatchesPerPage: displayNum })
+        console.log(mql.matches, displayNum);
+        this.setState({ swatchesPerPage: displayNum })
     }
     handleClick(event) {
         this.setState({currentPage: Number(event.target.id)})
@@ -26,12 +26,13 @@ export default class ColorList extends React.Component {
     componentWillMount() {
         mql.addListener(this.mediaQueryChanged)
     }
-
+    componentWillUnmount() {
+        mql.removeListener(this.mediaQueryChanged)
+    }
     componentDidMount() {
         this.setState({
             colors: this.props.colors
         })
-        mql.removeListener(this.mediaQueryChanged)
     }
 
     renderSwatch(swatch) {
