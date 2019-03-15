@@ -5,24 +5,23 @@ import logo from "../assets/logo.png"
 
 const styles = {
   sidebar: {
-    width: 256,
+    width: 320,
     height: "100%"
   },
   sidebarLink: {
     display: "block",
-    padding: "10px 20px",
-    color: "#757575",
-    textDecoration: "none"
-  },
-  divider: {
-    margin: "8px 0",
-    height: 1,
-    backgroundColor: "#757575"
+    padding: "9px 20px",
+    color: "#363C3C",
+    textDecoration: "none",
+    font: "28px Source Serif Pro, serif"
   },
   content: {
     padding: "16px",
     height: "100%",
     backgroundColor: "#D6D8D8"
+  },
+  button: {
+    margin: "10px 0 20px 20px"
   }
 };
 
@@ -36,7 +35,7 @@ const SidebarContent = props => {
     const links = []
     for (let ind = 0; ind < categories.length; ind++) {
         links.push(
-          <a key={ind} href="#" style={styles.sidebarLink}>
+          <a key={ind} href="#" style={styles.sidebarLink} onClick={() => props.onCatClick}>
             {categories[ind]}
           </a>
         );
@@ -47,8 +46,8 @@ const SidebarContent = props => {
 
     return (
         <Panel src={logo} style={style}>
-            <Randomize onRClick={props.onRandClick}/>
             <div style={styles.content}>
+                <Randomize style={styles.button} onRClick={props.onRandClick}/>
                 {links}
             </div>
         </Panel>
