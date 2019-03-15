@@ -199,6 +199,7 @@ button {
   color: black;
   font-size: 1em;
   text-align: center;
+  align-self: center;
 }
 
 /*# sourceMappingURL=index.css.map */

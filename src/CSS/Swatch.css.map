@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["../sass/Swatch.sass"],"names":[],"mappings":"AAAA;EACI;EAEA;EACA;EACA;;;AAEJ;EACI;EACA;;;AAEJ;EACI;EACA;EACA;EACA;EACA","file":"Swatch.css"}
+{"version":3,"sourceRoot":"","sources":["../sass/Swatch.sass","../sass/_include-media.scss"],"names":[],"mappings":"AAEA;EACI;EAEA;EACA;EACA;;ACwiBA;ED7iBJ;IAOQ;;;;AAER;EACI;EACA;;ACkiBA;EDpiBJ;IAIQ;;;;AAER;EACI;EACA;EACA;EACA;EACA;;ACyhBA;ED9hBJ;IAOQ;IACA","file":"Swatch.css"}

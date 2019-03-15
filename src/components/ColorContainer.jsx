@@ -30,6 +30,7 @@ export default class ColorContainer extends React.Component {
             sidebarOpen: true
         }
         this.onRandomClick = this.onRandomClick.bind(this)
+        // this.onCatClick = this.onCatClick.bind(this)
         this.onSetSidebarOpen = this.onSetSidebarOpen.bind(this)
         this.mediaQueryChanged = this.mediaQueryChanged.bind(this)
         this.toggleOpen = this.toggleOpen.bind(this)
@@ -57,6 +58,10 @@ export default class ColorContainer extends React.Component {
         }
         this.setState({ colors: shuffle(this.state.colors)})
     }
+    // onCatClick(cat) {
+    //     console.log(cat);
+    // }
+
     componentWillMount() {
         const colors = colorAPI.all();
         this.setState({ colors: colors })
@@ -71,7 +76,7 @@ export default class ColorContainer extends React.Component {
 
 
     render() {
-        const sidebar = <SidebarContent onRandClick={this.onRandomClick}/>
+        const sidebar = <SidebarContent onRandClick={this.onRandomClick} onCatClick={this.onCatClick}/>
 
         const contentHeader = (
             <span>
