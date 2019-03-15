@@ -15,6 +15,11 @@
   height: 350px;
   border-radius: 6px 6px 0 0;
 }
+@media (max-width: 768px) {
+  .detail-sample {
+    height: 300px;
+  }
+}
 
 .detail-label {
   height: 30px;
@@ -22,6 +27,12 @@
   background-color: white;
   color: black;
   font-size: 1.5em;
+}
+@media (max-width: 768px) {
+  .detail-label {
+    height: 40px;
+    font-size: 1em;
+  }
 }
 
 .tint-row {
@@ -42,15 +53,30 @@
   border-radius: 6px;
   flex-shrink: 1;
 }
+@media (max-width: 768px) {
+  .tint-swatch {
+    width: 90px;
+  }
+}
 
 .tint-sample {
-  height: 120px;
+  height: 150px;
   border-radius: 6px 6px 0 0;
+}
+@media (max-width: 768px) {
+  .tint-sample {
+    height: 90px;
+  }
 }
 
 .tint-label {
   height: 40px;
   padding: 15px 0 0 15px;
+}
+@media (max-width: 768px) {
+  .tint-label {
+    height: 20px;
+  }
 }
 
 .clear-button {

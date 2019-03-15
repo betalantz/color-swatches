@@ -4,10 +4,20 @@
   box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.2);
   border-radius: 6px;
 }
+@media (max-width: 768px) {
+  .swatch {
+    width: 180px;
+  }
+}
 
 .sample {
   height: 220px;
   border-radius: 6px 6px 0 0;
+}
+@media (max-width: 768px) {
+  .sample {
+    height: 180px;
+  }
 }
 
 .label {
@@ -16,6 +26,12 @@
   background-color: white;
   color: black;
   font-size: 1.5em;
+}
+@media (max-width: 768px) {
+  .label {
+    height: 20px;
+    font-size: 1em;
+  }
 }
 
 /*# sourceMappingURL=Swatch.css.map */

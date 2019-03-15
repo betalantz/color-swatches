@@ -29,8 +29,8 @@ export default class ColorContainer extends React.Component {
             sidebarDocked: mql.matches,
             sidebarOpen: true
         }
-        // this.onRandomClick = this.onRandomClick.bind(this)
-        this.onCatClick = this.onCatClick.bind(this)
+        this.onRandomClick = this.onRandomClick.bind(this)
+        // this.onCatClick = this.onCatClick.bind(this)
         this.onSetSidebarOpen = this.onSetSidebarOpen.bind(this)
         this.mediaQueryChanged = this.mediaQueryChanged.bind(this)
         this.toggleOpen = this.toggleOpen.bind(this)
