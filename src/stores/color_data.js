@@ -1,4 +1,4 @@
-export const colorAPI = {
+const colorAPI = {
     colors: [
         {
             "colorId": 0,
@@ -1287,5 +1287,9 @@ export const colorAPI = {
     get: function(id) {
         const thisColor = c => c.colorId === id
         return this.colors.find(thisColor)
+    },
+    getCat: function(cat) {
+        const regex = new RegExp(cat, 'gi')
+        return this.colors.filter(({name}) => name.match(regex))
     }
 }
