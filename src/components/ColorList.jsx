@@ -41,7 +41,7 @@ export default class ColorList extends React.Component {
 
     render() {
         const { colors, currentPage, swatchesPerPage } = this.state;
-    
+        console.log("in List render, here is colors prop", colors);
         // Logic for displaying current swatches
         const idxOfLastSwatch = currentPage * swatchesPerPage
         const idxOfFirstSwatch = idxOfLastSwatch - swatchesPerPage

@@ -30,7 +30,7 @@ export default class ColorContainer extends React.Component {
             sidebarOpen: true
         }
         this.onRandomClick = this.onRandomClick.bind(this)
-        // this.onCatClick = this.onCatClick.bind(this)
+        this.onCatClick = this.onCatClick.bind(this)
         this.onSetSidebarOpen = this.onSetSidebarOpen.bind(this)
         this.mediaQueryChanged = this.mediaQueryChanged.bind(this)
         this.toggleOpen = this.toggleOpen.bind(this)
@@ -46,7 +46,6 @@ export default class ColorContainer extends React.Component {
         }
     }
     onRandomClick() {
-        console.log('Random')
         function shuffle(arr) {
             for (let i = 0; i < arr.length -1; i++) {
                 let j = i + Math.floor(Math.random()*(arr.length-i))
@@ -54,17 +53,22 @@ export default class ColorContainer extends React.Component {
                 arr[j] = arr[i]
                 arr[i] = temp
             }
+            console.log(arr);
             return arr
         }
+        console.log("in onRandamClick");
         this.setState({ colors: shuffle(this.state.colors)})
     }
-    // onCatClick(cat) {
-    //     console.log(cat);
-    // }
-
+    onCatClick(cat) {
+        const category = colorAPI.getCat(cat)
+        console.log(category);
+        this.setState({ colors: category })
+    }
+    
     componentWillMount() {
         const colors = colorAPI.all();
         this.setState({ colors: colors })
+        
         mql.addListener(this.mediaQueryChanged)
     }
     componentWillUnmount() {
@@ -100,13 +104,13 @@ export default class ColorContainer extends React.Component {
             onSetOpen: this.onSetSidebarOpen,
             sidebarClassName: 'sidebar'
         };
-
+        console.log("in container render(), here is state.colors:", this.state.colors);
         return <div className="color-container">
             <Sidebar {...sidebarProps}>
                 <Panel title={contentHeader}>
                     <div style={styles.content}>
                         <Switch>
-                            <Route exact path='/' render={(props) => (
+                            <Route exact path='/' render={() => (
                                 <ColorList colors={this.state.colors} />
                             )}/>
                             <Route path='/detail/:id' component={ColorDetail} />
