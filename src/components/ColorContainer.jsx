@@ -57,7 +57,7 @@ export default class ColorContainer extends React.Component {
             return arr
         }
         console.log("in onRandamClick");
-        this.setState({ colors: shuffle(this.state.colors)})
+        this.setState({ colors: shuffle(colorAPI.all())})
     }
     onCatClick(cat) {
         const category = colorAPI.getCat(cat)
@@ -85,13 +85,13 @@ export default class ColorContainer extends React.Component {
         const contentHeader = (
             <span>
                 {!this.state.sidebarDocked && (
-                <a
+                <button
                     onClick={this.toggleOpen}
-                    href="#"
+                    
                     style={styles.contentHeaderMenuLink}
                 >
                     =
-                </a>
+                </button>
                 )}
                 <img src={logo} alt="New Engen Logo"/>
             </span>
@@ -110,7 +110,7 @@ export default class ColorContainer extends React.Component {
                 <Panel title={contentHeader}>
                     <div style={styles.content}>
                         <Switch>
-                            <Route exact path='/' render={() => (
+                            <Route path='/' render={() => (
                                 <ColorList colors={this.state.colors} />
                             )}/>
                             <Route path='/detail/:id' component={ColorDetail} />
