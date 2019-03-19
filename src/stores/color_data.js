@@ -1,4 +1,4 @@
-const colorAPI = {
+export const colorAPI = {
     colors: [
         {
             "colorId": 0,
