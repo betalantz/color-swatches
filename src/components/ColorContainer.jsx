@@ -53,15 +53,12 @@ export default class ColorContainer extends React.Component {
                 arr[j] = arr[i]
                 arr[i] = temp
             }
-            console.log(arr);
             return arr
         }
-        console.log("in onRandamClick");
         this.setState({ colors: shuffle(colorAPI.all())})
     }
     onCatClick(cat) {
         const category = colorAPI.getCat(cat)
-        console.log(category);
         this.setState({ colors: category })
     }
     
@@ -104,13 +101,12 @@ export default class ColorContainer extends React.Component {
             onSetOpen: this.onSetSidebarOpen,
             sidebarClassName: 'sidebar'
         };
-        console.log("in container render(), here is state.colors:", this.state.colors);
         return <div className="color-container">
             <Sidebar {...sidebarProps}>
                 <Panel title={contentHeader}>
                     <div style={styles.content}>
                         <Switch>
-                            <Route path='/' render={() => (
+                            <Route exact path='/' render={() => (
                                 <ColorList colors={this.state.colors} />
                             )}/>
                             <Route path='/detail/:id' component={ColorDetail} />
