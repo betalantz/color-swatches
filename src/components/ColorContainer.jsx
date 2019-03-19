@@ -82,13 +82,13 @@ export default class ColorContainer extends React.Component {
         const contentHeader = (
             <span>
                 {!this.state.sidebarDocked && (
-                <button
+                <a
                     onClick={this.toggleOpen}
-                    
+                    href="#"
                     style={styles.contentHeaderMenuLink}
                 >
                     =
-                </button>
+                </a>
                 )}
                 <img src={logo} alt="New Engen Logo"/>
             </span>
