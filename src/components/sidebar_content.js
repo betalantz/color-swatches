@@ -35,7 +35,7 @@ const SidebarContent = props => {
     const links = []
     for (let ind = 0; ind < categories.length; ind++) {
         links.push(
-          <a key={ind} href="#" style={styles.sidebarLink} onClick={() => props.onCatClick}>
+          <a key={ind} href="#" style={styles.sidebarLink} onClick={() => props.onCatClick(categories[ind])}>
             {categories[ind]}
           </a>
         );

@@ -8,7 +8,6 @@ export default class ColorList extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            colors: [],
             currentPage: 1,
             swatchesPerPage: 12,
         }
@@ -17,7 +16,6 @@ export default class ColorList extends React.Component {
     }
     mediaQueryChanged() {
         let displayNum = mql.matches ? 12 : 9
-        console.log(mql.matches, displayNum);
         this.setState({ swatchesPerPage: displayNum })
     }
     handleClick(event) {
@@ -29,29 +27,22 @@ export default class ColorList extends React.Component {
     componentWillUnmount() {
         mql.removeListener(this.mediaQueryChanged)
     }
-    componentDidMount() {
-        this.setState({
-            colors: this.props.colors
-        })
-    }
 
     renderSwatch(swatch) {
         return <Swatch swatch={swatch} key={swatch.colorId}></Swatch>
     }
 
     render() {
-        const { colors, currentPage, swatchesPerPage } = this.state;
-    
+        const { currentPage, swatchesPerPage } = this.state;
         // Logic for displaying current swatches
         const idxOfLastSwatch = currentPage * swatchesPerPage
         const idxOfFirstSwatch = idxOfLastSwatch - swatchesPerPage
-        const currentSwatches = colors.slice(idxOfFirstSwatch, idxOfLastSwatch)
-
+        const currentSwatches = this.props.colors.slice(idxOfFirstSwatch, idxOfLastSwatch)
         const renderSwatches = currentSwatches.map(this.renderSwatch)
 
         // Logic for displaying page numbers
         const pageNumbers = []
-        for (let i = 1; i <= Math.ceil(colors.length / swatchesPerPage); i++) {
+        for (let i = 1; i <= Math.ceil(this.props.colors.length / swatchesPerPage); i++) {
             pageNumbers.push(i)
         }
 
